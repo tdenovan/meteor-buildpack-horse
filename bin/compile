@@ -98,7 +98,7 @@ echo "------> checking for npm packages"
 npm -v
 if [ -e "$COMPILE_DIR"/app/programs/server/package.json ]; then
   echo "-----> Installing NPM packages"
-  cd "$COMPILE_DIR"/app/programs/server && npm install --verbose
+  cd "$COMPILE_DIR"/app/programs/server && npm --https-proxy=http://10.140.24.81:8080 install --verbose
 fi
 
 #
