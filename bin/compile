@@ -94,6 +94,7 @@ mv $BUNDLE_DEST/bundle "$COMPILE_DIR/app"
 rmdir $BUNDLE_DEST
 
 # If we use npm, run npm install.
+echo "------> checking for npm packages"
 if [ -e "$COMPILE_DIR"/app/programs/server/package.json ]; then
   echo "-----> Installing NPM packages"
   cd "$COMPILE_DIR"/app/programs/server && npm install --verbose
